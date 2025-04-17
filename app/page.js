@@ -66,7 +66,7 @@ export default function Home() {
         </p>
         
         <Link 
-          href="/cv.pdf" 
+          href="/CVKristersKalkis.pdf" 
           download="Kristers_CV.pdf"
           className="inline-flex"
           title="Download my CV"
