@@ -64,9 +64,17 @@ export default function Home() {
         <p className="text-lg text-gray-700 mb-6 text-center">
           Studying at <span className="font-bold text-indigo-900">TSI University</span>. Expected to graduate in <span className="font-bold text-indigo-900">2028</span>.
         </p>
-        <Button variant="default" className="cursor-pointer">
-          My CV <FaDownload />
-        </Button>
+        
+        <Link 
+          href="/cv.pdf" 
+          download="Kristers_CV.pdf"
+          className="inline-flex"
+          title="Download my CV"
+        >
+          <Button variant="default" className="cursor-pointer gap-2">
+            My CV <FaDownload className="h-4 w-4" />
+          </Button>
+        </Link>
       </div>
       {/*projects section */}
       <div className="mt-10 px-4 mb-16 ">
