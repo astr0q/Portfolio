@@ -46,7 +46,7 @@ export default function ProjectPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-white py-20 px-4">
+    <div className="min-h-screen py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <Link href="/projects" className="text-indigo-600 hover:text-indigo-800 mb-8 inline-block font-bold">
           ← Back to Projects

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function ProjectCard({ name, logo, desc }) {
   return (
-    <div className="group relative flex flex-col p-4 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 bg-white h-full">
+    <div className="group relative flex flex-col p-4 border border-black rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 bg-white h-full">
       <div className="w-full h-48 relative mb-4">
         <Image
           src={logo}
@@ -50,7 +50,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="bg-white min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 lg:px-8 py-20"
+      className="min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 lg:px-8 py-20"
     >
       <h1 className="text-4xl font-bold mb-4 text-center">My Projects</h1>
       <p className="text-lg text-gray-600 mb-10 text-center">

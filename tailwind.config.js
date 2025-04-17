@@ -10,6 +10,9 @@ module.exports = {
         primary: '#FBEAEB',
         secondary: '#2F3C7E',
       },
+      backgroundImage: {
+        'global-bg': "url('../public/back.jpg')",  // Updated path
+      },
     },
   },
   plugins: [],
