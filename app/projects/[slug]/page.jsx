@@ -22,7 +22,7 @@ const projectData = {
   },
   'e-commerce': {
     title: 'E-commerce Website',
-    description: 'E-commerce website with full functionality',
+    description: '(NOT FINISHED)E-commerce website with full functionality',
     image: '/examples/ecom.png',
     technologies: ['React', 'Stripe', 'Next.js', 'Tailwind CSS', 'Convex'],
     demoUrl: 'demohere',
