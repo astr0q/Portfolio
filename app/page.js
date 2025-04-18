@@ -5,7 +5,7 @@ import { FaDownload } from "react-icons/fa6";
 
 function TechnologyCard({ name, logo }) {
   return (
-    <div className="flex items-center gap-3 p-4 border rounded-xl shadow-sm hover:shadow-md transition border border-solid border-black">
+    <div className="flex items-center gap-3 p-4 border rounded-xl shadow-sm hover:shadow-md transition border-solid border-black">
       <Image src={logo} alt={`${name} logo`} width={30} height={30} />
       <p className="text-sm font-medium">{name}</p>
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">

@@ -1,9 +1,52 @@
 'use client'
 
-import { useState } from 'react'
-
+import { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function Contacts() {
+  const [send, setSend] = useState(false)
+  const [sent, setSent] = useState(false)
+
+  useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
+  }, [])
+
+  useEffect(()=>{
+    const timer = setTimeout(() => {
+      setSent(false)
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  },[sent])
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSend(true)
+
+    const formData = {
+      from_name: `${e.target['first-name'].value} ${e.target['last-name'].value}`,
+      from_email: e.target.email.value,
+      message: e.target.message.value,
+      time: new Date().toLocaleString(),
+    }
+
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formData
+      )
+
+      if (result.status === 200) {
+        setSent(true)
+        e.target.reset()
+      }
+    } catch (error) {
+      console.error('Failed to send email:', error)
+    } finally {
+      setSend(false)
+    }
+  }
 
   return (
     <div className="isolate px-6 py-24 sm:py-32 lg:px-8">
@@ -22,7 +65,7 @@ export default function Contacts() {
         <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Contact Page</h2>
         <p className="mt-2 text-lg/8 text-gray-600">Feel free to ask and send message.</p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">
@@ -84,12 +127,18 @@ export default function Contacts() {
         <div className="mt-10">
           <button
             type="submit"
-            className="border border-black block w-full rounded-md bg-indigo-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            disabled={send}
+            className="border border-black block w-full rounded-md bg-indigo-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-50"
           >
-            Let's talk
+            {send ? 'Sending...' : 'Let\'s talk'}
           </button>
         </div>
       </form>
+      {sent && (
+        <div className="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-md shadow-lg">
+          Message sent successfully!
+        </div>
+      )}
     </div>
   )
 }
