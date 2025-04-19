@@ -61,8 +61,12 @@ export default function Home() {
         <p className="text-lg text-gray-700 mb-2 text-center">
           Based in <span className="font-semibold">Riga, Latvia</span>
         </p>
+        <p className="text-lg text-gray-700 mb-3 text-center">
+          Studying <span className="font-bold text-indigo-900">Double Degree in Computer Science: Artificial Intelligence</span> at{" "}
+          <span className="font-bold text-indigo-900">TSI University</span>
+        </p>
         <p className="text-lg text-gray-700 mb-6 text-center">
-          Studying at <span className="font-bold text-indigo-900">TSI University</span>. Expected to graduate in <span className="font-bold text-indigo-900">2028</span>.
+          Expected to graduate in <span className="font-bold text-indigo-900">2028</span>
         </p>
         
         <Link 
