@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 14, featuring dynamic routing, contact form integration, and project showcases.
 
-First, run the development server:
+## 🚀 Features
 
+- **Responsive Design**: Optimized for all device sizes
+- **Dynamic Project Showcase**: Individual pages for each project
+- **Interactive Contact Form**: EmailJS integration for direct messaging
+- **Modern UI**: Built with Tailwind CSS and Shadcn UI
+- **Performance Optimized**: Fast loading and smooth animations
+- **Dark/Light Mode**: Theme switching capability
+
+## 🛠️ Tech Stack
+
+- Next.js 14
+- React
+- Tailwind CSS
+- EmailJS
+- Shadcn UI
+- React Icons
+
+## 🚦 Getting Started
+
+1. **Clone the repository:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. **Set up environment variables:**
+Create a `.env.local` file in the root directory:
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Run the development server:**
+```bash
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```plaintext
+portfolio/
+├── app/                  # Next.js app directory
+│   ├── projects/        # Project pages
+│   ├── contacts/        # Contact form
+│   └── page.js         # Home page
+├── components/          # Reusable components
+├── public/             # Static assets
+└── styles/            # Global styles
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Configuration
 
-## Deploy on Vercel
+- Tailwind configuration in `tailwind.config.js`
+- Next.js configuration in `next.config.js`
+- Email template configuration in EmailJS dashboard
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Features in Detail
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Home Page**: Introduction and featured projects
+- **Projects**: Showcase of development work
+- **Contact**: Interactive form with email integration
+- **Responsive Navigation**: Mobile-friendly menu
+- **Animations**: Smooth transitions and hover effects
+
+## 🚀 Deployment
+
+This project is deployed on Vercel. For deployment:
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Configure environment variables
+4. Deploy!
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+**Kristers Kalķis**
+- Phone: (+371) 28879971
+- Email: kkalkis89@gmail.com
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
