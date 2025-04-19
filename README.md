@@ -9,7 +9,6 @@ A modern, responsive portfolio website built with Next.js 14, featuring dynamic 
 - **Interactive Contact Form**: EmailJS integration for direct messaging
 - **Modern UI**: Built with Tailwind CSS and Shadcn UI
 - **Performance Optimized**: Fast loading and smooth animations
-- **Dark/Light Mode**: Theme switching capability
 
 ## 🛠️ Tech Stack
 
