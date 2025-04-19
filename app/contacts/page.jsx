@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
+import { FaPhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 export default function Contacts() {
   const [send, setSend] = useState(false)
@@ -62,8 +64,32 @@ export default function Contacts() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Contact Page</h2>
-        <p className="mt-2 text-lg/8 text-gray-600">Feel free to ask and send message.</p>
+        <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl p-3">
+          Contact Page
+        </h2>
+        
+        {/* Updated contact info styling */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-4 mb-6">
+          <a 
+            href="tel:+37128879971" 
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/90 shadow-md hover:shadow-lg transition-all duration-300 group border border-black"
+          >
+            <FaPhone className="text-indigo-600 group-hover:scale-110 transition-transform duration-300" />
+            <span className="text-gray-700 font-medium">(+371) 28879971</span>
+          </a>
+          
+          <a 
+            href="mailto:kkalkis89@gmail.com"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/90 shadow-md hover:shadow-lg transition-all duration-300 group border border-black"
+          >
+            <MdEmail className="text-indigo-600 text-xl group-hover:scale-110 transition-transform duration-300" />
+            <span className="text-gray-700 font-medium">kkalkis89@gmail.com</span>
+          </a>
+        </div>
+
+        <p className="mt-2 text-lg/8 text-gray-600">
+          Feel free to ask and send message.
+        </p>
       </div>
       <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

@@ -22,7 +22,7 @@ const Header = () => {
                 alt="Logo"
                 width={100}
                 height={100}
-                className="h-8 w-auto"
+                className="h-8 w-auto border border-white"
                 priority
               />
             </Link>
