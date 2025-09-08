@@ -83,10 +83,6 @@ This project is deployed on Vercel. For deployment:
 3. Configure environment variables
 4. Deploy!
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👤 Author
 
 **Kristers Kalķis**
